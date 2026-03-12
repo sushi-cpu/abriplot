@@ -140,14 +140,6 @@ make_figure(amr_mat, vf_mat, amr_meta, root, leaves,
 - pandas ≥ 1.3
 - matplotlib ≥ 3.5
 
----
-
-## Citation
-
-If you use abriplot in a publication, please cite:
-
-> [Your Name] (2025). abriplot: publication-quality AMR and virulence gene heatmap
-> with phylogenetic tree. https://github.com/YOUR_USERNAME/abriplot
 
 ---
 
