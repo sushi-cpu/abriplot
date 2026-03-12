@@ -145,4 +145,4 @@ make_figure(amr_mat, vf_mat, amr_meta, root, leaves,
 
 ## License
 
-MIT © [Your Name]
+MIT © [Sushant Nimbhokar]
