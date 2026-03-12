@@ -1,0 +1,55 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "abriplot"
+version         = "0.1.0"
+description     = "Publication-quality AMR + Virulence heatmap with phylogenetic tree from abricate output"
+readme          = "README.md"
+license         = { text = "MIT" }
+requires-python = ">=3.8"
+
+authors = [
+    { name = "Sushant Nimbhorkar", email = "sushantnimbhorkar@gmail.com" },
+]
+
+keywords = [
+    "bioinformatics", "AMR", "antimicrobial resistance",
+    "virulence", "heatmap", "phylogenetics", "abricate", "CARD", "VFDB",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "numpy>=1.21",
+    "pandas>=1.3",
+    "matplotlib>=3.5",
+]
+
+[project.scripts]
+abriplot = "abriplot.cli:main"
+
+[project.urls]
+Homepage      = "https://github.com/sushi-cpu/abriplot"
+Repository    = "https://github.com/sushi-cpu/abriplot"
+"Bug Tracker" = "https://github.com/sushi-cpuy/abriplot/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["abriplot*"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
