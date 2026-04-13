@@ -13,7 +13,7 @@ import pandas as pd
 
 def extract_sample(filepath):
     """Derive a clean sample name from an abricate TSV filename."""
-    return re.sub(r"__(card|resfinder|vfdb)\.tsv$", "",
+    return re.sub(r"_(card|resfinder|vfdb)\.tsv$", "",
                   os.path.basename(filepath))
 
 
