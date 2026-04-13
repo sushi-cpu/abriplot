@@ -38,7 +38,7 @@ def parse_tsv(fp, min_id=80.0, min_cov=80.0):
 
 def load_all(input_dir, min_id=80.0, min_cov=80.0):
     """
-    Load all *__card.tsv and *__vfdb.tsv files from input_dir.
+    Load all *_card.tsv and *_vfdb.tsv files from input_dir.
 
     Returns:
         amr_records : list of dicts  {sample, gene, resistance, identity, coverage}
@@ -46,7 +46,7 @@ def load_all(input_dir, min_id=80.0, min_cov=80.0):
     """
     amr, vf = [], []
 
-    for fp in sorted(glob.glob(os.path.join(input_dir, "*__card.tsv"))):
+    for fp in sorted(glob.glob(os.path.join(input_dir, "*_card.tsv"))):
         df = parse_tsv(fp, min_id, min_cov)
         if df is None:
             continue
@@ -61,7 +61,7 @@ def load_all(input_dir, min_id=80.0, min_cov=80.0):
                 "coverage":   r["%COVERAGE"],
             })
 
-    for fp in sorted(glob.glob(os.path.join(input_dir, "*__vfdb.tsv"))):
+    for fp in sorted(glob.glob(os.path.join(input_dir, "*_vfdb.tsv"))):
         df = parse_tsv(fp, min_id, min_cov)
         if df is None:
             continue
